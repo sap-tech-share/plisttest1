@@ -85,7 +85,7 @@
     },
     "componentUsages": {
       "attachmentReuseComponent": {
-          "name": "sap.se.mi.plm.lib.attachmentservice.attachment",
+          "name": "sap.se.mi.plm.lib.attachmentservice.attachment.components.stcomponent",
           "settings": {}
       }
 
@@ -165,10 +165,29 @@
                   "componentUsage": "attachmentReuseComponent",
                   "title": "{{Attachments}}",
                   "settings": {
-                      "mode": "C",
-                      "objectType": "ZOBJTEST",
-                      "objectKey": "1",
-                      "documentType": "GOS"
+                      "mode": "{= ${ui>/editable}?'C':'D'}",
+                      "objectType": "ZOBJTEST1",
+                      "objectKey": "{=${Plist}}",
+                      "documentType": "GOS",
+                      "attributeHandling": {
+                        "_VisibleAttributes": {
+                          "UPLOADEDBY": true,
+                          "UPLOADEDON": true,
+                          "FILESIZE": true,
+                          "ENABLELINK": true,
+                          "ATTACHMENTSTATUS": false,
+                          "ATTACHMENTTITLE": true,
+                          "SOURCE": false,
+                          "DIRDETAILS": false
+                        },
+                        "_VisibleActions": {
+                          "RENAME": false,
+                          "DELETE": true,
+                          "ADD": true,
+                          "ADDURL": false,
+                          "DOWNLOAD": true
+                        }
+                      }
                   }
               }
             }
