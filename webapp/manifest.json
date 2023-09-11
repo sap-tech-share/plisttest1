@@ -109,7 +109,7 @@
           "defaultCountMode": "Inline",
           "refreshAfterChange": false,
           "metadataUrlParams": {
-            "sap-value-list": "none"
+            
           }
         }
       },
@@ -147,7 +147,12 @@
             "enableTableFilterInPageVariant": true,
             "filterSettings": {
               "dateSettings": {
-                "useDateRange": true
+                "fields": {
+                  "CreatedAt": {
+                    "selectedValues": "QUARTER,YEAR,WEEK,MONTH,TO,TOMORROW,NEXTDAYS",
+                    "exclude": true
+                  }
+                }
               }
             }
           }
